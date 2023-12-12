@@ -1,0 +1,103 @@
+
+.page {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 100px;
+	position: static;
+	height: 750px;
+	width: 1500px;
+	background:linear-gradient(4deg,#3f455b,#405b60);
+	padding-top: 163px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 160PX;
+}
+.conteiner {
+		background:linear-gradient(18deg,#3f455b, #405b60);
+	 height: 1100px;
+	 height:100%;
+	 width: 100%;
+	 background-color:#405B60;
+	 padding-top: 163px;
+}
+.black-line{
+	position: static;
+    background-color: black;
+    width: 1500px;
+    height: 10px;
+    margin-top: -260px;
+}
+.page-header-text {
+	text-align: end;
+}
+.little-text {
+	flex-direction: column;
+	position: relative;
+	padding: 0px;
+	margin-top:299px;
+	margin-right:580px;
+
+}
+.norm-text {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	position: static;
+	margin-top:-70px;
+	margin-right:570px;
+	font-size:50px;
+}		
+.page-main-text {
+	margin-top: -40px;
+	margin-left: 790px	;
+	margin-right:500px ;
+	width: 649px;
+	height: 500px;
+	font-size: 17px;
+
+}
+.text {
+
+}
+.back-ground-for-Toma{
+	position: absolute;
+    background-color: #3E3E3E;
+    margin-top: -120px;
+    margin-left: 72px;
+    width: 524px;
+    height: 550px;
+}
+.really-Toma{
+	position: relative;
+	margin-top: 55px;
+	margin-left: 55px;
+}
+.vector-line{
+	width:310px;
+	height:64px;
+	padding-top: 0px;
+	position: absolute;
+	margin-left:980px;
+	margin-top: 110px;
+}
+.vector-line img{
+	opacity:.35;
+	padding: 0px;
+	border:0px;
+	display: block;
+	margin-top: -50px;
+}
+.dots-line{
+	display: flex;
+	justify-content: space-between;
+	mix-blend-mode: multiply;
+	margin-left: 127px;
+	margin-top: -40px;
+	margin-right: 300px;
+}
+.dots-line img{
+	display: flex;
+	height: 140px;
+	width: 480px;
+}

@@ -1,0 +1,34 @@
+.header {
+padding-top: 17px;
+padding-left: 32px;
+color: white;
+}
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.text {
+	font-family: Trocchi;
+display: flex;
+}
+.header-nav{
+	padding-right: 60px;
+}
+.header-nav ul{
+	display: flex;
+	color:white;
+	
+	list-style: none;
+}
+.header-nav li+li{
+	margin-left: 10px;
+}
+.header-nav a{
+	color:white;
+	text-decoration:none;
+}
+.header-nav a:hover{
+	color:#848484;
+		transition:color 0.2s ease;
+}
