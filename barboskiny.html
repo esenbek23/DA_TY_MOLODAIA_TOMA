@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <title>Aruca Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #quiz-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #question {
+      margin-bottom: 20px;
+    }
+
+    #input-container {
+      margin-top: 20px;
+    }
+
+    #video-container {
+      margin-top: 20px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="text">
+				<p>For the best girl I ve ever met</p>
+			</div>
+			<div class="header-nav">
+				<ul>
+						<li><a href="index.html">something</a></li>
+					<li><a href="barboskiny.html">something</a></li>
+					<li><a href="https://flomaster.top/uploads/posts/2022-07/1657151943_69-flomaster-club-p-risunok-malisha-iz-barboskinikh-krasivo-71.jpg">something</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+<div id="quiz-container">
+  <h1>AL Toma, ne podvedi))</h1>
+  <div id="question"></div>
+  <div id="input-container">
+    <label for="answer">Your Answer:</label>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Submit Answer</button>
+  </div>
+  <div id="video-container"></div>
+</div>
+
+<script>
+  const quizData = [
+    {
+      question: "Napishi 1?",
+      answer: "1"
+    },
+    {
+      question: "2?",
+      answer: "2"
+    },
+    {
+      question: "3?",
+      answer: "3"
+    },
+    {
+      question: "4?",
+      answer: "4"
+    },
+    {
+      question: "5?",
+      answer: "5"
+    }
+  ];
+
+  let currentQuestion = 0;
+  let correctAnswers = 0;
+
+  const questionElement = document.getElementById('question');
+  const answerInput = document.getElementById('answer');
+  const videoContainer = document.getElementById('video-container');
+
+  function loadQuestion() {
+    const currentQ = quizData[currentQuestion];
+    questionElement.innerText = currentQ.question;
+  }
+
+  function checkAnswer() {
+    const userAnswer = answerInput.value.trim();
+    const correctAnswer = quizData[currentQuestion].answer.trim();
+
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+      correctAnswers++;
+      currentQuestion++;
+      answerInput.value = '';
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        displayRewardVideo();
+      }
+    } else {
+      alert("Answer is not correct.");
+    }
+  }
+
+  function displayRewardVideo() {
+    const videoElement = document.createElement('video');
+    videoElement.src = 'best_vido.mp4';
+    videoElement.controls = true;
+    videoContainer.innerHTML = '';
+    videoContainer.appendChild(videoElement);
+  }
+  loadQuestion();
+</script>
+
+</body>
+</html>
