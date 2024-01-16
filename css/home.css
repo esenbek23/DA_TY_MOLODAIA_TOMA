@@ -49,6 +49,8 @@
 	margin-left: 150px;
 }
 .main-text{
+	font-family: Shantell Sans;
+	font-style: bold;
 	color: #000000;
 	font-size:15px;
 	height: 260px;
@@ -56,6 +58,11 @@
 	position: absolute;
 	margin-top: -10px;
 	margin-left: -118px;
+}
+.main-text p{
+	padding: 0;
+	margin:-3px;
+	font-size: 18px;
 }
 .block-text{
 	position: absolute;
