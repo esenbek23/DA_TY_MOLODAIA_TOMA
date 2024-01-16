@@ -126,9 +126,12 @@
 }
 
 .img2_back{
+	display: flex;
+	text-align: center;
+	align-items: center;
 	border-radius: 10px;
       background-color: white;
-      color: red;
+      color: black;
       transform: rotateY(180deg);
 }
 .img2_front{
@@ -201,7 +204,7 @@ background-color: #3F4156;
 	 position: relative;
 	 width: 332px;
 	 height: 711px;
-	 background-color: #3F4156;
+	
 }
 .img3_card{
       width: 100%;
@@ -214,6 +217,7 @@ background-color: #3F4156;
  }
 .img3_front,
 .img3_back{
+
       width: 100%;
       height: 100%;
       position: absolute;
@@ -231,15 +235,21 @@ background-color: #3F4156;
 .img3_front_img1 img{
 }
 .img3_back {
+	display: flex;
+	align-items: center;
 	border-radius: 10px;
       background-color: white;
       color: red;
       transform: rotateY(180deg);
  }
  .img3_back p{
+ 	display: flex;
+	text-align: center;
+	align-items: center;
  	color:red;
  }
  .img3_front{
+ 	 background-color: #3F4156;
       color: black;
  }
 
@@ -255,11 +265,11 @@ padding: 0px;
 }
 .text_inblock2 h1{
 	position: relative;
-	margin-top:10px;
-padding: 0;	
-font-family:Inter;
+	margin-top: 10px;
+	padding: 0;
+	font-family:Inter;
 	text-align: center;
-font-size: 15px;
+	font-size: 15px;
 }
 .text_inblock2 h2{
 	margin-top: -10px;
