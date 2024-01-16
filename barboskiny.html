@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/header.css">
   <title>Aruca Game</title>
   <style>
@@ -20,7 +20,7 @@
     #quiz-container {
       max-width: 600px;
       margin: 0 auto;
-      background-color:#AF9E88;
+      background-color: #EFE6DB;
       padding: 50px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@
     }
 
     #video-container {
-      margin-top: 20px;
+        margin-top: 20px;
     }
 
     video {
@@ -52,46 +52,47 @@
 			</div>
 			<div class="header-nav">
 				<ul>
-						<li><a href="index.html">something</a></li>
-					<li><a href="barboskiny.html">something</a></li>
-					<li><a href="https://flomaster.top/uploads/posts/2022-07/1657151943_69-flomaster-club-p-risunok-malisha-iz-barboskinikh-krasivo-71.jpg">something</a></li>
+						<li><a href="index.html">Main</a></li>
+          <li><a href="barboskiny.html">ArucaGame</a></li>
+          <li><a href="https://flomaster.top/uploads/posts/2022-07/1657151943_69-flomaster-club-p-risunok-malisha-iz-barboskinikh-krasivo-71.jpg">Gift</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 
 <div id="quiz-container">
-  <h1>AL Toma, ne podvedi))</h1>
+  <h1>Something</h1>
   <div id="question"></div>
   <div id="input-container">
     <label for="answer">Your Answer:</label>
     <input type="text" id="answer">
     <button onclick="checkAnswer()">Submit Answer</button>
   </div>
-  <div id="video-container"></div>
+  <div id="video-container">
+  </div>
 </div>
 
 <script>
   const quizData = [
     {
-      question: "Toxa ketetin zher?",
-      answer: "Batumi"
+      question: "Как мы называем богиню правосудия?",
+      answer: "Фемида"
     },
     {
       question: "2+8?",
       answer: "28"
     },
     {
-      question: "kakaya po chetu mars planeta",
-      answer: "4"
+      question: "У какого твоего знакомого душный знак зодиака?",
+      answer: "Есен"
     },
     {
-      question: "kakovo sveta u menia zerkalo?",
-      answer: "black"
+      question: "Какое зрение у Аяулым(минус скок)?",
+      answer: "6"
     },
     {
-      question: "esen durak da ili net?",
-      answer: "da"
+      question: "Твой любимый фильм про космос?",
+      answer: "Интерстеллар"
     }
   ];
 
@@ -106,8 +107,7 @@
     const currentQ = quizData[currentQuestion];
     questionElement.innerText = currentQ.question;
   }
-
-  function checkAnswer() {
+function checkAnswer() {
     const userAnswer = answerInput.value.trim();
     const correctAnswer = quizData[currentQuestion].answer.trim();
 
@@ -119,12 +119,21 @@
       if (currentQuestion < quizData.length) {
         loadQuestion();
       } else {
+        // Если это последний вопрос, скрываем строку ответов
+        document.getElementById('input-container').style.display = 'none';
+        
+        // Появляется новый текст вместо строки ответов
+        const finalTextElement = document.createElement('p');
+        finalTextElement.innerText = 'Моя Дадушечка , с днём рождения жанм 🤍. Желаю тебе все то что желаю и себе . Будь всегда счастлива. Уже как 11 лет мы дружим . Надеюсь что наша дружба будет длиться еще много много лет . Знай что я всегда буду стараться быть рядом с тобой ,когда тебе будет нужна помощь. Оставайся таким же душевным , искренним человеком . Я тебя безумно сильно люблю 🤍🤍 .';
+        document.getElementById('quiz-container').appendChild(finalTextElement);
+
         displayRewardVideo();
       }
     } else {
       alert("Answer is not correct.");
     }
-  }
+}
+
 
   function displayRewardVideo() {
     const videoElement = document.createElement('video');
